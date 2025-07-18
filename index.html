@@ -1,72 +1,110 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wartungsmodus – Neue Version wird hochgeladen</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>billware| Wartungsmodus</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-    html, body {
-      height: 100%;
-      font-family: Arial, sans-serif;
-      color: white;
-    }
+    <!-- Open Sans Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    body {
-      background: url('/images/background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-    }
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+        }
 
-    .container {
-      background-color: rgba(0, 0, 0, 0.6); /* halbtransparentes Overlay für bessere Lesbarkeit */
-      padding: 3rem;
-      border-radius: 1rem;
-      max-width: 600px;
-      width: 100%;
-    }
+        body {
+            background: url('/images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
 
-    .logo {
-      max-width: 200px;
-      margin: 0 auto 2rem;
-    }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+        .content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 20px;
+        }
 
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
+        .logo {
+            margin-bottom: 30px;
+        }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.5rem;
-      }
+        .logo img {
+            max-width: 300px;
+            width: 100%;
+        }
 
-      p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+        .box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .box h1 {
+            font-size: 22px;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        .box p {
+            font-size: 14px;
+            color: #eaeaea;
+            line-height: 1.6;
+        }
+
+        .box a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .spinner {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <img src="/images/logo.png" alt="Logo" class="logo">
-    <h1>Wir sind gleich wieder für Sie da</h1>
-    <p>Aktuell laden wir eine neue Version unserer Anwendung hoch.<br>
-    Bitte haben Sie einen Moment Geduld – das System steht in Kürze wieder wie gewohnt zur Verfügung.</p>
-  </div>
+<div class="overlay"></div>
+<div class="content">
+    <div class="logo">
+        <img src="/images/logo.png" alt="Logo">
+    </div>
+    <div class="box">
+        <div class="spinner">
+            <i class="fas fa-gear fa-spin"></i>
+        </div>
+        <h1>Eine neue Version wird aufgespielt</h1>
+        <p style="margin-top:25px">Die Wartung dauert voraussichtlich nur wenige Minuten. Sollte diese Seite länger sichtbar sein, kontaktiere uns bitte per E-Mail an <a href="mailto:info@billware.de">info@billware.de</a></p>
+        <p>Vielen Dank für dein Verständnis.</p>
+    </div>
+</div>
 </body>
 </html>
