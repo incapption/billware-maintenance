@@ -3,10 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wartung</title>
+  <title>Wartungsmodus – Neue Version wird hochgeladen</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    body {
+      background: url('/images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6); /* halbtransparentes Overlay für bessere Lesbarkeit */
+      padding: 3rem;
+      border-radius: 1rem;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .logo {
+      max-width: 200px;
+      margin: 0 auto 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
-<body style="text-align:center; padding:50px; font-family:sans-serif;">
-  <h1>Wir sind bald zurück!</h1>
-  <p>Unsere Website wird gerade aktualisiert. Bitte versuche es in ein paar Minuten erneut.</p>
+<body>
+  <div class="container">
+    <img src="/images/logo.png" alt="Logo" class="logo">
+    <h1>Wir sind gleich wieder für Sie da</h1>
+    <p>Aktuell laden wir eine neue Version unserer Anwendung hoch.<br>
+    Bitte haben Sie einen Moment Geduld – das System steht in Kürze wieder wie gewohnt zur Verfügung.</p>
+  </div>
 </body>
 </html>
